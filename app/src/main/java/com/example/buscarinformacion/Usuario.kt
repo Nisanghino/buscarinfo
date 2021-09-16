@@ -1,9 +1,22 @@
 package com.example.buscarinformacion
 
-import retrofit2.Call
-import retrofit2.http.GET
+import com.google.gson.annotations.SerializedName
 
-interface Usuario {
-    @GET("api/users/mojombo/repos")
-    fun ObtenerRepos(): Call<ResultadoApi>
+class Usuario {
+        var login :String=" "
+        var id : Int = 0
+    @SerializedName("repos_url")
+    var reposUrl : String= " "
 }
+
+class Repo{
+    var name : String = ""
+    var description : String = ""
+    var language : String = ""
+
+    @SerializedName ("html_url")
+    var url : String =""
+
+
+}
+//ascii >˜
